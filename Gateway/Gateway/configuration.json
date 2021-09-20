@@ -1,0 +1,46 @@
+{
+	"ReRoutes": [
+		{
+			"DownstreamPathTemplate": "/api/pedido",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44353
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/pedido",
+			"UpstreamHttpMethod": [ "Get" ]
+		},
+
+		{
+			"DownstreamPathTemplate": "/api/catalogo",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44374
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/catalogo",
+			"UpstreamHttpMethod": [ "Get" ]
+		},
+
+
+		{
+			"DownstreamPathTemplate": "/api/WeatherForecast",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 60275
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/agendaonline",
+			"UpstreamHttpMethod": [ "Get" ]
+		}
+
+
+	],
+	"GlobalConfiguration": {}
+}
